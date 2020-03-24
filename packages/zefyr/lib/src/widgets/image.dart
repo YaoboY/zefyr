@@ -220,7 +220,8 @@ class RenderEditableImage extends RenderBox
         minWidth: 0.0,
         maxWidth: width,
         minHeight: 0.0,
-        maxHeight:(width * 16 / 9).floorToDouble(),
+//          maxHeight:(width * 16 / 9).floorToDouble(),
+        maxHeight:constraints.maxHeight,
       );
       child.layout(childConstraints, parentUsesSize: true);
       _lastChildSize = child.size;
